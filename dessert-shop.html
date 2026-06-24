@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Cart | The Tran's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h2><a href="index.html">The Tran's <span>Kitchen</span></a></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
+                <li><a href="index.html#about" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                <li><a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#flan" class="btn primary-btn" data-i18n="shop.viewSections">VIEW COLLECTIONS</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="dessert-shop-hero">
+            <span class="subtitle" data-i18n="shop.subtitle">DESSERT SHOP</span>
+            <div class="fresh-label" data-i18n="shop.freshLabel">BUILD YOUR CART</div>
+            <h1 data-i18n-html="shop.title">Flan, Snacks & Seasonal Desserts</h1>
+            <p data-i18n="shop.copy">Pick your favorites below, then open the cart on the right to review the total and submit your checkout details.</p>
+            <div class="dessert-shop-links">
+                <a href="#flan" class="gallery-nav-back" data-i18n="shop.jumpFlan">Jump to Flan →</a>
+                <a href="#snacks" class="gallery-nav-back" data-i18n="shop.jumpSnacks">Jump to Snacks →</a>
+                <a href="#seasonal" class="gallery-nav-back" data-i18n="shop.jumpSeasonal">Jump to Seasonal →</a>
+            </div>
+        </section>
+
+        <section id="flan" class="dessert-section">
+            <div class="dessert-section-head">
+                <span class="subtitle" data-i18n="shop.flanSubtitle">FLAN COLLECTION</span>
+                <h2 data-i18n="shop.flanTitle">Jelly Flan Cakes</h2>
+                <p data-i18n="shop.flanCopy">Silky layers, fresh fruit, and a bright finish that keeps each cake light and elegant.</p>
+            </div>
+            <section class="gallery-grid">
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop" alt="Jelly flan cake with flowers">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.flan.oneTitle">Floral Flan Cake</h3>
+                        <p data-i18n="shop.flan.oneCopy">Fresh, pastel, and layered with care.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$38</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="flan-floral" data-item-name="Floral Flan Cake" data-item-price="38" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1562007908-17c67e878c88?q=80&w=800&auto=format&fit=crop" alt="Green jelly dessert cake">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.flan.twoTitle">Matcha Jelly Flan</h3>
+                        <p data-i18n="shop.flan.twoCopy">Soft green tones with a smooth custard finish.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$34</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="flan-matcha" data-item-name="Matcha Jelly Flan" data-item-price="34" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=800&auto=format&fit=crop" alt="Layered jelly cake">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.flan.threeTitle">Layered Delight</h3>
+                        <p data-i18n="shop.flan.threeCopy">Clean layers for a polished presentation.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$36</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="flan-layered" data-item-name="Layered Delight" data-item-price="36" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="snacks" class="dessert-section">
+            <div class="dessert-section-head">
+                <span class="subtitle" data-i18n="shop.snacksSubtitle">SNACKS COLLECTION</span>
+                <h2 data-i18n="shop.snacksTitle">Jelly Flower Snacks</h2>
+                <p data-i18n="shop.snacksCopy">Flower-topped creations with soft, translucent layers and a handmade finish.</p>
+            </div>
+            <section class="gallery-grid">
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=800&auto=format&fit=crop" alt="Flower cake with blossoms">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.snacks.oneTitle">Blush Blossom Cake</h3>
+                        <p data-i18n="shop.snacks.oneCopy">Petal-inspired florals in a creamy palette.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$32</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="snacks-blush" data-item-name="Blush Blossom Cake" data-item-price="32" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?q=80&w=800&auto=format&fit=crop" alt="Floral jelly cake">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.snacks.twoTitle">Garden Jewel</h3>
+                        <p data-i18n="shop.snacks.twoCopy">Bright florals balanced with a soft base.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$34</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="snacks-garden" data-item-name="Garden Jewel" data-item-price="34" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop" alt="Elegant flower cake">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.snacks.threeTitle">Elegant Petals</h3>
+                        <p data-i18n="shop.snacks.threeCopy">Refined colors for a polished centerpiece.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$36</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="snacks-petals" data-item-name="Elegant Petals" data-item-price="36" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="seasonal" class="dessert-section">
+            <div class="dessert-section-head">
+                <span class="subtitle" data-i18n="shop.seasonalSubtitle">SEASONAL COLLECTION</span>
+                <h2 data-i18n="shop.seasonalTitle">Seasonal Desserts</h2>
+                <p data-i18n="shop.seasonalCopy">Rotating treats inspired by the season, from rich chocolate to fresh, bright finishes.</p>
+            </div>
+            <section class="gallery-grid">
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=800&auto=format&fit=crop" alt="Seasonal dessert squares">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.seasonal.oneTitle">Chocolate Squares</h3>
+                        <p data-i18n="shop.seasonal.oneCopy">Rich, layered bars with a clean finish.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$18</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="seasonal-chocolate" data-item-name="Chocolate Squares" data-item-price="18" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=800&auto=format&fit=crop" alt="Creamy dessert cups">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.seasonal.twoTitle">Cream Dessert Cups</h3>
+                        <p data-i18n="shop.seasonal.twoCopy">Light seasonal cups with soft whipped topping.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$16</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="seasonal-cups" data-item-name="Cream Dessert Cups" data-item-price="16" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1542826438-0c00f5a8b0e8?q=80&w=800&auto=format&fit=crop" alt="Mixed dessert assortment">
+                    <div class="gallery-caption">
+                        <h3 data-i18n="shop.seasonal.threeTitle">Assorted Treats</h3>
+                        <p data-i18n="shop.seasonal.threeCopy">A curated mix for holidays and special events.</p>
+                        <div class="card-actions">
+                            <span class="price-tag">$22</span>
+                            <button type="button" class="btn cart-add-btn" data-add-cart data-item-id="seasonal-assorted" data-item-name="Assorted Treats" data-item-price="22" data-i18n="shop.addToCart">Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <div class="cart-shell" data-cart-root data-zelle-phone="your Zelle phone number">
+        <button type="button" class="cart-toggle-fab" data-cart-toggle aria-expanded="false"><span data-i18n="cart.toggle">Cart</span> <span class="cart-toggle-count" data-cart-count>0</span></button>
+        <div class="cart-overlay" data-cart-overlay></div>
+        <aside class="cart-drawer" data-cart-drawer>
+            <div class="cart-drawer-header">
+                <h3 data-i18n="cart.title">Your Cart</h3>
+                <button type="button" class="cart-close-btn" data-cart-close aria-label="Close cart">×</button>
+            </div>
+            <div class="cart-drawer-body">
+                <div class="cart-summary-panel">
+                    <h3 data-i18n="cart.summaryTitle">Cart Summary</h3>
+                    <div class="cart-items" data-cart-items></div>
+                    <div class="cart-total-row">
+                        <span data-i18n="cart.totalLabel">Total</span>
+                        <strong data-cart-total>$0.00</strong>
+                    </div>
+                    <p class="cart-zelle-note" data-i18n-html="cart.zelleNote">After submit, please Zelle the total to <strong data-zelle-display>your Zelle phone number</strong>.</p>
+                    <button type="button" class="cart-clear-btn" data-cart-clear data-i18n="cart.clear">Clear Cart</button>
+                </div>
+                <div class="cart-form-panel">
+                    <h3 data-i18n="cart.checkoutTitle">Checkout Details</h3>
+                    <p class="cart-checkout-intro" data-i18n="cart.checkoutCopy">Name, phone number, and email are required before you can submit the order request.</p>
+                    <form class="cart-checkout-form" data-cart-checkout>
+                        <div class="form-grid">
+                            <input type="text" name="customerName" placeholder="Your Name" data-i18n-placeholder="cart.name" required>
+                            <input type="tel" name="customerPhone" placeholder="Phone Number" data-i18n-placeholder="cart.phone" required>
+                            <input type="email" name="customerEmail" placeholder="Email Address" data-i18n-placeholder="cart.email" required>
+                            <input type="date" name="eventDate" placeholder="Event Date" data-i18n-placeholder="cart.date">
+                            <textarea name="orderNotes" placeholder="Order notes, delivery preferences, or flavors..." data-i18n-placeholder="cart.notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn cart-submit-btn" data-i18n="cart.submit">Submit Order Request</button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">HOME</a>
+            <a href="cakes.html" data-i18n="nav.cakes">CAKES</a>
+            <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
+            <p data-i18n="footer.location">Mint Hill, NC</p>
+        </div>
+    </footer>
+
+    <script id="site-translations" type="application/json">
+    {
+        "en": {
+            "document.title": "Dessert Cart | The Tran's Kitchen",
+            "nav.home": "HOME",
+            "nav.cakes": "CAKES",
+            "nav.about": "ABOUT",
+            "nav.faq": "FAQ",
+            "nav.contact": "CONTACT",
+            "shop.viewSections": "VIEW COLLECTIONS",
+            "shop.subtitle": "DESSERT SHOP",
+            "shop.freshLabel": "BUILD YOUR CART",
+            "shop.title": "Flan, Snacks & Seasonal Desserts",
+            "shop.copy": "Pick your favorites below, then open the cart on the right to review the total and submit your checkout details.",
+            "shop.jumpFlan": "Jump to Flan →",
+            "shop.jumpSnacks": "Jump to Snacks →",
+            "shop.jumpSeasonal": "Jump to Seasonal →",
+            "shop.flanSubtitle": "FLAN COLLECTION",
+            "shop.flanTitle": "Jelly Flan Cakes",
+            "shop.flanCopy": "Silky layers, fresh fruit, and a bright finish that keeps each cake light and elegant.",
+            "shop.flan.oneTitle": "Floral Flan Cake",
+            "shop.flan.oneCopy": "Fresh, pastel, and layered with care.",
+            "shop.flan.twoTitle": "Matcha Jelly Flan",
+            "shop.flan.twoCopy": "Soft green tones with a smooth custard finish.",
+            "shop.flan.threeTitle": "Layered Delight",
+            "shop.flan.threeCopy": "Clean layers for a polished presentation.",
+            "shop.snacksSubtitle": "SNACKS COLLECTION",
+            "shop.snacksTitle": "Jelly Flower Snacks",
+            "shop.snacksCopy": "Flower-topped creations with soft, translucent layers and a handmade finish.",
+            "shop.snacks.oneTitle": "Blush Blossom Cake",
+            "shop.snacks.oneCopy": "Petal-inspired florals in a creamy palette.",
+            "shop.snacks.twoTitle": "Garden Jewel",
+            "shop.snacks.twoCopy": "Bright florals balanced with a soft base.",
+            "shop.snacks.threeTitle": "Elegant Petals",
+            "shop.snacks.threeCopy": "Refined colors for a polished centerpiece.",
+            "shop.seasonalSubtitle": "SEASONAL COLLECTION",
+            "shop.seasonalTitle": "Seasonal Desserts",
+            "shop.seasonalCopy": "Rotating treats inspired by the season, from rich chocolate to fresh, bright finishes.",
+            "shop.seasonal.oneTitle": "Chocolate Squares",
+            "shop.seasonal.oneCopy": "Rich, layered bars with a clean finish.",
+            "shop.seasonal.twoTitle": "Cream Dessert Cups",
+            "shop.seasonal.twoCopy": "Light seasonal cups with soft whipped topping.",
+            "shop.seasonal.threeTitle": "Assorted Treats",
+            "shop.seasonal.threeCopy": "A curated mix for holidays and special events.",
+            "shop.addToCart": "Add to Cart",
+            "cart.toggle": "Cart",
+            "cart.title": "Your Cart",
+            "cart.summaryTitle": "Cart Summary",
+            "cart.totalLabel": "Total",
+            "cart.zelleNote": "After submit, please Zelle the total to <strong>your Zelle phone number</strong>.",
+            "cart.clear": "Clear Cart",
+            "cart.checkoutTitle": "Checkout Details",
+            "cart.checkoutCopy": "Name, phone number, and email are required before you can submit the order request.",
+            "cart.name": "Your Name",
+            "cart.phone": "Phone Number",
+            "cart.email": "Email Address",
+            "cart.date": "Event Date",
+            "cart.notes": "Order notes, delivery preferences, or flavors...",
+            "cart.submit": "Submit Order Request",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. All Rights Reserved.",
+            "footer.location": "Mint Hill, NC"
+        },
+        "vi": {
+            "document.title": "Giỏ Đặt Bánh | The Tran's Kitchen",
+            "nav.home": "TRANG CHỦ",
+            "nav.cakes": "BÁNH KEM",
+            "nav.about": "GIỚI THIỆU",
+            "nav.faq": "CÂU HỎI",
+            "nav.contact": "LIÊN HỆ",
+            "shop.viewSections": "XEM BỘ SƯU TẬP",
+            "shop.subtitle": "CỬA HÀNG TRÁNG MIỆNG",
+            "shop.freshLabel": "TẠO GIỎ HÀNG",
+            "shop.title": "Flan, Món Ăn Vặt & Món Tráng Miệng Theo Mùa",
+            "shop.copy": "Chọn món bạn thích bên dưới, rồi mở giỏ ở bên phải để xem tổng tiền và gửi thông tin thanh toán.",
+            "shop.jumpFlan": "Đến phần Flan →",
+            "shop.jumpSnacks": "Đến phần Ăn Vặt →",
+            "shop.jumpSeasonal": "Đến phần Theo Mùa →",
+            "shop.flanSubtitle": "BỘ SƯU TẬP FLAN",
+            "shop.flanTitle": "Bánh Rau Câu Flan",
+            "shop.flanCopy": "Những lớp bánh mềm mịn, trái cây tươi và lớp hoàn thiện sáng nhẹ giúp bánh thanh thoát và tinh tế.",
+            "shop.flan.oneTitle": "Bánh Flan Hoa",
+            "shop.flan.oneCopy": "Tươi mới, pastel và được làm cẩn thận.",
+            "shop.flan.twoTitle": "Flan Matcha Rau Câu",
+            "shop.flan.twoCopy": "Tông xanh dịu với lớp custard mịn.",
+            "shop.flan.threeTitle": "Tầng Lớp Hoàn Hảo",
+            "shop.flan.threeCopy": "Các lớp bánh gọn gàng cho vẻ trình bày đẹp mắt.",
+            "shop.snacksSubtitle": "BỘ SƯU TẬP ĂN VẶT",
+            "shop.snacksTitle": "Bánh Rau Câu Hoa",
+            "shop.snacksCopy": "Những mẫu bánh hoa nhiều lớp mềm trong, được hoàn thiện thủ công.",
+            "shop.snacks.oneTitle": "Bánh Hoa Hồng Nhạt",
+            "shop.snacks.oneCopy": "Hoa lấy cảm hứng từ cánh hoa trong bảng màu kem dịu.",
+            "shop.snacks.twoTitle": "Viên Ngọc Vườn",
+            "shop.snacks.twoCopy": "Hoa tươi rực rỡ cân bằng trên nền bánh mềm.",
+            "shop.snacks.threeTitle": "Cánh Hoa Thanh Lịch",
+            "shop.snacks.threeCopy": "Màu sắc tinh tế cho một trung tâm bàn tiệc đẹp mắt.",
+            "shop.seasonalSubtitle": "BỘ SƯU TẬP THEO MÙA",
+            "shop.seasonalTitle": "Món Tráng Miệng Theo Mùa",
+            "shop.seasonalCopy": "Các món thay đổi theo mùa, từ sô cô la đậm vị đến những món tươi sáng nhẹ nhàng.",
+            "shop.seasonal.oneTitle": "Thanh Sô Cô La",
+            "shop.seasonal.oneCopy": "Những thanh bánh nhiều lớp với lớp hoàn thiện gọn gàng.",
+            "shop.seasonal.twoTitle": "Ly Kem Tráng Miệng",
+            "shop.seasonal.twoCopy": "Những ly ngọt nhẹ theo mùa với lớp kem mềm.",
+            "shop.seasonal.threeTitle": "Món Mix Đa Dạng",
+            "shop.seasonal.threeCopy": "Tổ hợp món được chọn lọc cho ngày lễ và dịp đặc biệt.",
+            "shop.addToCart": "Thêm vào giỏ",
+            "cart.toggle": "Giỏ hàng",
+            "cart.title": "Giỏ hàng của bạn",
+            "cart.summaryTitle": "Tóm tắt giỏ hàng",
+            "cart.totalLabel": "Tổng tiền",
+            "cart.zelleNote": "Sau khi gửi, vui lòng Zelle tổng tiền đến <strong>số điện thoại Zelle của bạn</strong>.",
+            "cart.clear": "Xóa giỏ",
+            "cart.checkoutTitle": "Thông tin thanh toán",
+            "cart.checkoutCopy": "Tên, số điện thoại và email là bắt buộc trước khi bạn có thể gửi yêu cầu đặt hàng.",
+            "cart.name": "Tên của bạn",
+            "cart.phone": "Số điện thoại",
+            "cart.email": "Địa chỉ email",
+            "cart.date": "Ngày sự kiện",
+            "cart.notes": "Ghi chú đơn hàng, giao hàng hoặc hương vị...",
+            "cart.submit": "Gửi yêu cầu đặt hàng",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. Bảo lưu mọi quyền.",
+            "footer.location": "Mint Hill, NC"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

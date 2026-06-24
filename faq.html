@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | The Tran's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
+                <li><a href="index.html#about" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a></li>
+                <li><a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="contact.html#contact" class="btn primary-btn" data-i18n="faq.cta">ORDER INQUIRY</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <span class="subtitle" data-i18n="faq.subtitle">FAQ</span>
+            <div class="fresh-label" data-i18n="faq.freshLabel">ORDERING HELP</div>
+            <h1 data-i18n-html="faq.title">Frequently Asked Questions</h1>
+            <p data-i18n="faq.copy">Quick answers about ordering, timing, pickup, and custom designs.</p>
+            <div class="gallery-hero-links">
+                <a href="#faq-answers" class="gallery-nav-back" data-i18n="faq.jumpQuestions">Jump to Questions →</a>
+                <a href="contact.html#contact" class="gallery-nav-back" data-i18n="faq.jumpContact">Go to Contact →</a>
+            </div>
+        </section>
+
+        <section id="faq-answers" class="faq-section">
+            <div class="faq-layout">
+                <aside class="faq-sidebar">
+                    <span class="subtitle" data-i18n="faq.sidebarSubtitle">BEFORE YOU ORDER</span>
+                    <h2 data-i18n-html="faq.sidebarTitle">Planning made <em>simple</em>.</h2>
+                    <p data-i18n="faq.sidebarCopy">These answers cover the most common questions so you can decide faster and order with confidence.</p>
+                    <div class="faq-note-list">
+                        <div class="faq-note">
+                            <strong data-i18n="faq.note1Title">Lead time</strong>
+                            <span data-i18n="faq.note1Copy">Custom cakes are best booked early.</span>
+                        </div>
+                        <div class="faq-note">
+                            <strong data-i18n="faq.note2Title">Design help</strong>
+                            <span data-i18n="faq.note2Copy">You can send inspiration photos and color ideas.</span>
+                        </div>
+                        <div class="faq-note">
+                            <strong data-i18n="faq.note3Title">Pickup details</strong>
+                            <span data-i18n="faq.note3Copy">Pickup and delivery options can be discussed on the form.</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary data-i18n="faq.q1.question">How far in advance should I order?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q1.answer">A week or more is ideal for most cakes, and weddings or larger custom orders should be booked earlier whenever possible.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq.q2.question">Do you make custom flavors and fillings?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q2.answer">Yes. You can request flavors, fillings, and finish details that fit your event and taste.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq.q3.question">How many servings do your cakes feed?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q3.answer">Serving counts depend on cake size, layers, and design. Share your guest count in the form and I'll help you choose the right size.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq.q4.question">Do you offer pickup or delivery?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q4.answer">Pickup is available, and delivery can be arranged for select orders. We can work out the details together after you send an inquiry.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq.q5.question">Can I send inspiration photos?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q5.answer">Absolutely. Photos, sketches, and color references are welcome and help shape the final design.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq.q6.question">How does payment work?</summary>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.q6.answer">A deposit may be required to reserve your date, with the remaining balance handled before pickup or delivery.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">HOME</a>
+            <a href="cakes.html" data-i18n="nav.cakes">CAKES</a>
+            <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
+            <a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a>
+            <a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
+            <p data-i18n="footer.location">Mint Hill, NC</p>
+        </div>
+    </footer>
+
+    <script id="site-translations" type="application/json">
+    {
+        "en": {
+            "document.title": "FAQ | The Tran's Kitchen",
+            "nav.home": "HOME",
+            "nav.cakes": "CAKES",
+            "nav.about": "ABOUT",
+            "nav.faq": "FAQ",
+            "nav.contact": "CONTACT",
+            "faq.cta": "ORDER INQUIRY",
+            "faq.subtitle": "FAQ",
+            "faq.freshLabel": "ORDERING HELP",
+            "faq.title": "Frequently Asked Questions",
+            "faq.copy": "Quick answers about ordering, timing, pickup, and custom designs.",
+            "faq.jumpQuestions": "Jump to Questions →",
+            "faq.jumpContact": "Go to Contact →",
+            "faq.sidebarSubtitle": "BEFORE YOU ORDER",
+            "faq.sidebarTitle": "Planning made <em>simple</em>.",
+            "faq.sidebarCopy": "These answers cover the most common questions so you can decide faster and order with confidence.",
+            "faq.note1Title": "Lead time",
+            "faq.note1Copy": "Custom cakes are best booked early.",
+            "faq.note2Title": "Design help",
+            "faq.note2Copy": "You can send inspiration photos and color ideas.",
+            "faq.note3Title": "Pickup details",
+            "faq.note3Copy": "Pickup and delivery options can be discussed on the form.",
+            "faq.q1.question": "How far in advance should I order?",
+            "faq.q1.answer": "A week or more is ideal for most cakes, and weddings or larger custom orders should be booked earlier whenever possible.",
+            "faq.q2.question": "Do you make custom flavors and fillings?",
+            "faq.q2.answer": "Yes. You can request flavors, fillings, and finish details that fit your event and taste.",
+            "faq.q3.question": "How many servings do your cakes feed?",
+            "faq.q3.answer": "Serving counts depend on cake size, layers, and design. Share your guest count in the form and I'll help you choose the right size.",
+            "faq.q4.question": "Do you offer pickup or delivery?",
+            "faq.q4.answer": "Pickup is available, and delivery can be arranged for select orders. We can work out the details together after you send an inquiry.",
+            "faq.q5.question": "Can I send inspiration photos?",
+            "faq.q5.answer": "Absolutely. Photos, sketches, and color references are welcome and help shape the final design.",
+            "faq.q6.question": "How does payment work?",
+            "faq.q6.answer": "A deposit may be required to reserve your date, with the remaining balance handled before pickup or delivery.",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. All Rights Reserved.",
+            "footer.location": "Mint Hill, NC"
+        },
+        "vi": {
+            "document.title": "Câu Hỏi Thường Gặp | The Tran's Kitchen",
+            "nav.home": "TRANG CHỦ",
+            "nav.cakes": "BÁNH KEM",
+            "nav.about": "GIỚI THIỆU",
+            "nav.faq": "CÂU HỎI",
+            "nav.contact": "LIÊN HỆ",
+            "faq.cta": "ĐẶT BÁNH",
+            "faq.subtitle": "CÂU HỎI",
+            "faq.freshLabel": "HỖ TRỢ ĐẶT BÁNH",
+            "faq.title": "Các câu hỏi thường gặp",
+            "faq.copy": "Những câu trả lời nhanh về đặt bánh, thời gian, nhận bánh và thiết kế riêng.",
+            "faq.jumpQuestions": "Đến phần câu hỏi →",
+            "faq.jumpContact": "Đến trang liên hệ →",
+            "faq.sidebarSubtitle": "TRƯỚC KHI ĐẶT",
+            "faq.sidebarTitle": "Lên kế hoạch thật <em>đơn giản</em>.",
+            "faq.sidebarCopy": "Những câu trả lời này bao gồm các thắc mắc phổ biến nhất để bạn có thể quyết định nhanh hơn và tự tin đặt bánh.",
+            "faq.note1Title": "Thời gian đặt",
+            "faq.note1Copy": "Bánh tùy chỉnh nên đặt sớm.",
+            "faq.note2Title": "Hỗ trợ thiết kế",
+            "faq.note2Copy": "Bạn có thể gửi ảnh tham khảo và ý tưởng màu sắc.",
+            "faq.note3Title": "Nhận bánh",
+            "faq.note3Copy": "Có thể trao đổi về nhận bánh hoặc giao hàng trong mẫu liên hệ.",
+            "faq.q1.question": "Tôi nên đặt bánh trước bao lâu?",
+            "faq.q1.answer": "Tối thiểu một tuần là phù hợp cho hầu hết các loại bánh, và bánh cưới hoặc đơn đặt riêng lớn nên đặt sớm hơn nếu có thể.",
+            "faq.q2.question": "Bạn có làm hương vị và nhân bánh theo yêu cầu không?",
+            "faq.q2.answer": "Có. Bạn có thể yêu cầu hương vị, nhân bánh và cách hoàn thiện phù hợp với sự kiện của mình.",
+            "faq.q3.question": "Bánh của bạn phục vụ được bao nhiêu người?",
+            "faq.q3.answer": "Số phần ăn phụ thuộc vào kích thước, số tầng và thiết kế. Hãy cho tôi biết số khách trong mẫu, tôi sẽ giúp chọn kích cỡ phù hợp.",
+            "faq.q4.question": "Có nhận tại chỗ hoặc giao hàng không?",
+            "faq.q4.answer": "Có nhận tại chỗ, và một số đơn có thể sắp xếp giao hàng. Chúng ta có thể trao đổi chi tiết sau khi bạn gửi yêu cầu.",
+            "faq.q5.question": "Tôi có thể gửi ảnh tham khảo không?",
+            "faq.q5.answer": "Hoàn toàn được. Ảnh, phác thảo và bảng màu đều hữu ích để định hình thiết kế cuối cùng.",
+            "faq.q6.question": "Thanh toán như thế nào?",
+            "faq.q6.answer": "Có thể cần đặt cọc để giữ ngày của bạn, và phần còn lại sẽ được thanh toán trước khi nhận bánh hoặc giao hàng.",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. Bảo lưu mọi quyền.",
+            "footer.location": "Mint Hill, NC"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

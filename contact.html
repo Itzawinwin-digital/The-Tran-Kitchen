@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Tran's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
+                <li><a href="index.html#about" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+                <li><a href="contact.html#contact" class="active" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="cakes.html" class="btn primary-btn" data-i18n="contact.ctaBack">VIEW CAKES</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <span class="subtitle" data-i18n="contact.subtitle">CONTACT</span>
+            <div class="fresh-label" data-i18n="contact.freshLabel">QUICK RESPONSE</div>
+            <h1 data-i18n-html="contact.title">Contact &amp; Orders</h1>
+            <p data-i18n="contact.copy">Tell me what you're planning and I'll help guide the next steps.</p>
+            <div class="gallery-hero-links">
+                <a href="cakes.html" class="gallery-nav-back" data-i18n="contact.jumpCakes">Browse Cakes →</a>
+                <a href="faq.html" class="gallery-nav-back" data-i18n="contact.jumpFaq">Visit FAQ →</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-text">
+                <span class="subtitle" data-i18n="contact.formSubtitle">LET'S CREATE SOMETHING</span>
+                <h2 data-i18n-html="contact.formTitle">Sweet Together &hearts;</h2>
+                <p data-i18n="contact.formCopy">Have a cake in mind? Fill out the form and we'll get back to you soon!</p>
+                <div class="contact-notes">
+                    <div class="contact-notes-grid">
+                        <div class="contact-note">
+                            <span data-i18n="contact.note1Title">RESPONSE TIME</span>
+                            <strong data-i18n="contact.note1Copy">Within 24 hours</strong>
+                        </div>
+                        <div class="contact-note">
+                            <span data-i18n="contact.note2Title">SERVICE AREA</span>
+                            <strong data-i18n="contact.note2Copy">Mint Hill &amp; Charlotte</strong>
+                        </div>
+                        <div class="contact-note">
+                            <span data-i18n="contact.note3Title">BEST METHOD</span>
+                            <strong data-i18n="contact.note3Copy">Use the inquiry form</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form id="inquiryForm">
+                    <div class="form-grid">
+                        <input type="text" placeholder="Your Name" data-i18n-placeholder="form.name" required>
+                        <input type="email" placeholder="Email Address" data-i18n-placeholder="form.email" required>
+                        <input type="tel" placeholder="Phone Number" data-i18n-placeholder="form.phone" required>
+                        <input type="date" placeholder="Event Date" data-i18n-placeholder="form.date" required>
+                        <input type="number" placeholder="Number of Servings" data-i18n-placeholder="form.servings">
+                        <input type="text" placeholder="Budget (Optional)" data-i18n-placeholder="form.budget">
+                        <textarea placeholder="Tell us about your cake..." data-i18n-placeholder="form.message" rows="4" required></textarea>
+
+                        <div class="upload-box">
+                            <span>📷</span>
+                            <p data-i18n-html="form.upload">Upload Inspiration Photo<br>(Optional)</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn" data-i18n="cta.sendInquiry">SEND INQUIRY</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">HOME</a>
+            <a href="cakes.html" data-i18n="nav.cakes">CAKES</a>
+            <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
+            <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+            <a href="contact.html#contact" class="active" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
+            <p data-i18n="footer.location">Mint Hill, NC</p>
+        </div>
+    </footer>
+
+    <script id="site-translations" type="application/json">
+    {
+        "en": {
+            "document.title": "Contact | The Tran's Kitchen",
+            "nav.home": "HOME",
+            "nav.cakes": "CAKES",
+            "nav.about": "ABOUT",
+            "nav.faq": "FAQ",
+            "nav.contact": "CONTACT",
+            "contact.ctaBack": "VIEW CAKES",
+            "contact.subtitle": "CONTACT",
+            "contact.freshLabel": "QUICK RESPONSE",
+            "contact.title": "Contact &amp; Orders",
+            "contact.copy": "Tell me what you're planning and I'll help guide the next steps.",
+            "contact.jumpCakes": "Browse Cakes →",
+            "contact.jumpFaq": "Visit FAQ →",
+            "contact.formSubtitle": "LET'S CREATE SOMETHING",
+            "contact.formTitle": "Sweet Together &hearts;",
+            "contact.formCopy": "Have a cake in mind? Fill out the form and we'll get back to you soon!",
+            "contact.note1Title": "RESPONSE TIME",
+            "contact.note1Copy": "Within 24 hours",
+            "contact.note2Title": "SERVICE AREA",
+            "contact.note2Copy": "Mint Hill & Charlotte",
+            "contact.note3Title": "BEST METHOD",
+            "contact.note3Copy": "Use the inquiry form",
+            "form.name": "Your Name",
+            "form.email": "Email Address",
+            "form.phone": "Phone Number",
+            "form.date": "Event Date",
+            "form.servings": "Number of Servings",
+            "form.budget": "Budget (Optional)",
+            "form.message": "Tell us about your cake...",
+            "form.upload": "Upload Inspiration Photo<br>(Optional)",
+            "cta.sendInquiry": "SEND INQUIRY",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. All Rights Reserved.",
+            "footer.location": "Mint Hill, NC"
+        },
+        "vi": {
+            "document.title": "Liên Hệ | The Tran's Kitchen",
+            "nav.home": "TRANG CHỦ",
+            "nav.cakes": "BÁNH KEM",
+            "nav.about": "GIỚI THIỆU",
+            "nav.faq": "CÂU HỎI",
+            "nav.contact": "LIÊN HỆ",
+            "contact.ctaBack": "XEM BÁNH",
+            "contact.subtitle": "LIÊN HỆ",
+            "contact.freshLabel": "PHẢN HỒI NHANH",
+            "contact.title": "Liên hệ &amp; Đặt bánh",
+            "contact.copy": "Hãy cho tôi biết bạn đang lên kế hoạch gì, tôi sẽ giúp bạn các bước tiếp theo.",
+            "contact.jumpCakes": "Xem các mẫu bánh →",
+            "contact.jumpFaq": "Xem câu hỏi thường gặp →",
+            "contact.formSubtitle": "CHÚNG TA HÃY TẠO RA ĐIỀU GÌ ĐÓ",
+            "contact.formTitle": "Ngọt ngào cùng nhau &hearts;",
+            "contact.formCopy": "Bạn đã có ý tưởng về chiếc bánh? Điền vào mẫu và chúng tôi sẽ phản hồi sớm!",
+            "contact.note1Title": "THỜI GIAN PHẢN HỒI",
+            "contact.note1Copy": "Trong vòng 24 giờ",
+            "contact.note2Title": "KHU VỰC PHỤC VỤ",
+            "contact.note2Copy": "Mint Hill & Charlotte",
+            "contact.note3Title": "CÁCH TỐT NHẤT",
+            "contact.note3Copy": "Dùng mẫu liên hệ",
+            "form.name": "Tên của bạn",
+            "form.email": "Địa chỉ email",
+            "form.phone": "Số điện thoại",
+            "form.date": "Ngày sự kiện",
+            "form.servings": "Số phần",
+            "form.budget": "Ngân sách (Không bắt buộc)",
+            "form.message": "Hãy kể cho chúng tôi về chiếc bánh của bạn...",
+            "form.upload": "Tải lên ảnh tham khảo<br>(Không bắt buộc)",
+            "cta.sendInquiry": "GỬI YÊU CẦU",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. Bảo lưu mọi quyền.",
+            "footer.location": "Mint Hill, NC"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

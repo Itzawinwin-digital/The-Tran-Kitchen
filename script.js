@@ -5,7 +5,227 @@ document.addEventListener('DOMContentLoaded', () => {
     const translationScript = document.getElementById('site-translations');
     const carouselRoots = document.querySelectorAll('[data-carousel]');
     const inquiryForm = document.getElementById('inquiryForm');
+    const cartRoots = document.querySelectorAll('[data-cart-root]');
+    const cartStorageKey = 'tran-kitchen-cart';
+    const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const translations = translationScript ? JSON.parse(translationScript.textContent) : null;
+
+    const escapeHtml = (value) => value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+    const getCart = () => {
+        try {
+            return JSON.parse(localStorage.getItem(cartStorageKey) || '[]');
+        } catch {
+            return [];
+        }
+    };
+
+    const saveCart = (cart) => {
+        localStorage.setItem(cartStorageKey, JSON.stringify(cart));
+    };
+
+    const formatMoney = (amount) => moneyFormatter.format(amount);
+
+    const renderCart = (root) => {
+        const itemsContainer = root.querySelector('[data-cart-items]');
+        const totalNode = root.querySelector('[data-cart-total]');
+        const phoneNode = root.querySelector('[data-zelle-display]');
+        const countNode = root.querySelector('[data-cart-count]');
+        const drawer = root.querySelector('[data-cart-drawer]');
+        const overlay = root.querySelector('[data-cart-overlay]');
+        const toggleButton = root.querySelector('[data-cart-toggle]');
+        const cart = getCart();
+
+        if (!itemsContainer || !totalNode) {
+            return;
+        }
+
+        const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+        if (!cart.length) {
+            itemsContainer.innerHTML = '<p class="cart-empty">Your cart is empty. Add items from the gallery above.</p>';
+        } else {
+            itemsContainer.innerHTML = cart.map((item) => `
+                <article class="cart-item" data-cart-item-id="${escapeHtml(item.id)}">
+                    <div class="cart-item-meta">
+                        <strong>${escapeHtml(item.name)}</strong>
+                        <span>${formatMoney(item.price)} each</span>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button type="button" class="cart-step-btn" data-cart-action="decrease" aria-label="Decrease ${escapeHtml(item.name)}">−</button>
+                        <span class="cart-qty">${item.qty}</span>
+                        <button type="button" class="cart-step-btn" data-cart-action="increase" aria-label="Increase ${escapeHtml(item.name)}">+</button>
+                        <button type="button" class="cart-remove-btn" data-cart-action="remove">Remove</button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        totalNode.textContent = formatMoney(total);
+
+        if (countNode) {
+            countNode.textContent = String(cart.reduce((sum, item) => sum + item.qty, 0));
+        }
+
+        if (toggleButton) {
+            toggleButton.setAttribute('aria-expanded', drawer?.classList.contains('is-open') ? 'true' : 'false');
+        }
+
+        if (overlay && drawer) {
+            overlay.classList.toggle('is-open', drawer.classList.contains('is-open'));
+        }
+
+        if (phoneNode) {
+            phoneNode.textContent = root.dataset.zellePhone || 'your Zelle phone number';
+        }
+    };
+
+    const renderAllCarts = () => {
+        cartRoots.forEach((root) => renderCart(root));
+    };
+
+    const addToCart = ({ id, name, price }) => {
+        const cart = getCart();
+        const existing = cart.find((item) => item.id === id);
+
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ id, name, price, qty: 1 });
+        }
+
+        saveCart(cart);
+        renderAllCarts();
+    };
+
+    const changeCartItemQty = (itemId, delta) => {
+        const cart = getCart();
+        const item = cart.find((entry) => entry.id === itemId);
+
+        if (!item) {
+            return;
+        }
+
+        item.qty += delta;
+
+        const nextCart = cart.filter((entry) => entry.qty > 0);
+        saveCart(nextCart);
+        renderAllCarts();
+    };
+
+    const removeCartItem = (itemId) => {
+        saveCart(getCart().filter((entry) => entry.id !== itemId));
+        renderAllCarts();
+    };
+
+    const clearCart = () => {
+        saveCart([]);
+        renderAllCarts();
+    };
+
+    document.querySelectorAll('[data-add-cart]').forEach((button) => {
+        button.addEventListener('click', () => {
+            addToCart({
+                id: button.dataset.itemId,
+                name: button.dataset.itemName,
+                price: Number(button.dataset.itemPrice),
+            });
+        });
+    });
+
+    cartRoots.forEach((root) => {
+        const cartItems = root.querySelector('[data-cart-items]');
+        const clearButton = root.querySelector('[data-cart-clear]');
+        const checkoutForm = root.querySelector('[data-cart-checkout]');
+        const drawer = root.querySelector('[data-cart-drawer]');
+        const overlay = root.querySelector('[data-cart-overlay]');
+        const toggleButton = root.querySelector('[data-cart-toggle]');
+        const closeButton = root.querySelector('[data-cart-close]');
+
+        const setDrawerOpen = (isOpen) => {
+            if (!drawer) {
+                return;
+            }
+
+            drawer.classList.toggle('is-open', isOpen);
+            overlay?.classList.toggle('is-open', isOpen);
+            root.classList.toggle('is-open', isOpen);
+            toggleButton?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        };
+
+        toggleButton?.addEventListener('click', () => {
+            setDrawerOpen(!drawer?.classList.contains('is-open'));
+        });
+
+        closeButton?.addEventListener('click', () => setDrawerOpen(false));
+
+        overlay?.addEventListener('click', () => setDrawerOpen(false));
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                setDrawerOpen(false);
+            }
+        });
+
+        cartItems?.addEventListener('click', (event) => {
+            const control = event.target.closest('[data-cart-action]');
+            const itemNode = event.target.closest('[data-cart-item-id]');
+
+            if (!control || !itemNode) {
+                return;
+            }
+
+            const itemId = itemNode.dataset.cartItemId;
+            const action = control.dataset.cartAction;
+
+            if (action === 'increase') {
+                changeCartItemQty(itemId, 1);
+            } else if (action === 'decrease') {
+                changeCartItemQty(itemId, -1);
+            } else if (action === 'remove') {
+                removeCartItem(itemId);
+            }
+        });
+
+        clearButton?.addEventListener('click', clearCart);
+
+        checkoutForm?.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const cart = getCart();
+            const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const customerName = checkoutForm.elements.customerName?.value.trim();
+            const customerPhone = checkoutForm.elements.customerPhone?.value.trim();
+            const customerEmail = checkoutForm.elements.customerEmail?.value.trim();
+
+            if (!cart.length) {
+                alert('Your cart is empty. Add at least one item before submitting.');
+                return;
+            }
+
+            if (!customerName || !customerPhone || !customerEmail) {
+                return;
+            }
+
+            const zellePhone = root.dataset.zellePhone || 'your Zelle phone number';
+            const languageIsVietnamese = document.documentElement.lang === 'vi';
+            const message = languageIsVietnamese
+                ? `Cảm ơn ${customerName}! Tổng đơn hàng của bạn là ${formatMoney(total)}. Vui lòng Zelle số tiền này đến ${zellePhone}. Chúng tôi sẽ liên hệ qua ${customerPhone} và ${customerEmail}.`
+                : `Thank you, ${customerName}! Your cart total is ${formatMoney(total)}. Please Zelle this amount to ${zellePhone}. We will contact you at ${customerPhone} and ${customerEmail}.`;
+
+            alert(message);
+            checkoutForm.reset();
+            clearCart();
+            setDrawerOpen(false);
+        });
+    });
+
+    renderAllCarts();
 
     const applyTranslations = (language) => {
         const dictionary = translations && translations[language] ? translations[language] : null;
