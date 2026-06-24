@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes | The Tran's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="cakes.html" class="active" data-i18n="nav.cakes">CAKES</a></li>
+                <li><a href="index.html#about" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#contact" class="btn primary-btn" data-i18n="cta.orderInquiry">ORDER INQUIRY</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <span class="subtitle" data-i18n="cakes.subtitle">OUR CAKES</span>
+            <div class="fresh-label" data-i18n="cakes.freshLabel">FRESH &amp; FLAVORFUL</div>
+            <h1 data-i18n-html="cakes.title">Wedding & Birthday Cakes</h1>
+            <p data-i18n="cakes.copy">Browse the two main cake collections below and jump directly to the section you want.</p>
+            <div class="gallery-hero-links">
+                <a href="#wedding-cakes" class="gallery-nav-back" data-i18n="cakes.jumpWedding">Jump to Wedding Cakes →</a>
+                <a href="#birthday-cakes" class="gallery-nav-back" data-i18n="cakes.jumpBirthday">Jump to Birthday Cakes →</a>
+            </div>
+        </section>
+
+        <section id="wedding-cakes" class="gallery-section">
+            <div class="section-title">
+                <h3 data-i18n="gallery.wedding">WEDDING CAKES</h3>
+                <div class="divider"></div>
+                <p class="gallery-section-copy" data-i18n="cakes.weddingIntro">Elegant tiers, soft florals, and timeless finishes.</p>
+            </div>
+            <div class="gallery-carousel" data-carousel>
+                <button type="button" class="carousel-arrow carousel-arrow-left" data-carousel-prev aria-label="Previous wedding cake">‹</button>
+                <div class="gallery-strip" aria-label="Wedding cakes carousel" data-carousel-track>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=800&auto=format&fit=crop" alt="Wedding cake with florals">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.oneTitle">Romantic Floral Cake</h3>
+                            <p data-i18n="cakes.wedding.oneCopy">Soft ivory tiers with fresh blooms.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1607478900766-efe1322f8f77?q=80&w=800&auto=format&fit=crop" alt="Minimal wedding cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.twoTitle">Minimal White Cake</h3>
+                            <p data-i18n="cakes.wedding.twoCopy">Clean lines with a warm, modern finish.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=800&auto=format&fit=crop" alt="Two tier wedding cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.threeTitle">Two-Tier Classic</h3>
+                            <p data-i18n="cakes.wedding.threeCopy">Simple, graceful, and wedding-day ready.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1562777717-dc6984f65a63?q=80&w=800&auto=format&fit=crop" alt="Wedding cake with berries">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.fourTitle">Berry Garden Cake</h3>
+                            <p data-i18n="cakes.wedding.fourCopy">Fresh berries with a soft cream finish.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1535141192574-c0dcf5ae12e4?q=80&w=800&auto=format&fit=crop" alt="Nude wedding cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.fiveTitle">Nude Floral Cake</h3>
+                            <p data-i18n="cakes.wedding.fiveCopy">Warm tones and airy floral details.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800&auto=format&fit=crop" alt="White wedding cake slice display">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.wedding.sixTitle">Clean Cut Elegance</h3>
+                            <p data-i18n="cakes.wedding.sixCopy">Bright ivory layers with refined styling.</p>
+                        </div>
+                    </article>
+                </div>
+                <button type="button" class="carousel-arrow carousel-arrow-right" data-carousel-next aria-label="Next wedding cake">›</button>
+            </div>
+        </section>
+
+        <section id="birthday-cakes" class="gallery-section">
+            <div class="section-title">
+                <h3 data-i18n="gallery.birthday">BIRTHDAY CAKES</h3>
+                <div class="divider"></div>
+                <p class="gallery-section-copy" data-i18n="cakes.birthdayIntro">Playful colors, sweet details, and celebratory designs.</p>
+            </div>
+            <div class="gallery-carousel" data-carousel>
+                <button type="button" class="carousel-arrow carousel-arrow-left" data-carousel-prev aria-label="Previous birthday cake">‹</button>
+                <div class="gallery-strip" aria-label="Birthday cakes carousel" data-carousel-track>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop" alt="Birthday cake with candles">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.oneTitle">Birthday Classic</h3>
+                            <p data-i18n="cakes.birthday.oneCopy">Light pink tones with festive finishing touches.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=800&auto=format&fit=crop" alt="Cake with birthday topper">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.twoTitle">Happy Birthday Cake</h3>
+                            <p data-i18n="cakes.birthday.twoCopy">Soft cream buttercream with a hand-lettered topper.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1528977895530-4c8b1f9d7f7f?q=80&w=800&auto=format&fit=crop" alt="Confetti birthday cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.threeTitle">Confetti Fun</h3>
+                            <p data-i18n="cakes.birthday.threeCopy">Bright and cheerful for a joyful celebration.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1542826438-0c00f5a8b0e8?q=80&w=800&auto=format&fit=crop" alt="Chocolate birthday cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.fourTitle">Chocolate Celebration</h3>
+                            <p data-i18n="cakes.birthday.fourCopy">Rich layers with a smooth chocolate finish.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1586985289868-46f7ac5b5d89?q=80&w=800&auto=format&fit=crop" alt="Pink party cake">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.fiveTitle">Party Pink Cake</h3>
+                            <p data-i18n="cakes.birthday.fiveCopy">Soft pastel layers with a playful vibe.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-card gallery-card--wide">
+                        <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=800&auto=format&fit=crop" alt="Dessert cup birthday treat">
+                        <div class="gallery-caption">
+                            <h3 data-i18n="cakes.birthday.sixTitle">Sweet Treat Cups</h3>
+                            <p data-i18n="cakes.birthday.sixCopy">A fun dessert option for party tables.</p>
+                        </div>
+                    </article>
+                </div>
+                <button type="button" class="carousel-arrow carousel-arrow-right" data-carousel-next aria-label="Next birthday cake">›</button>
+            </div>
+        </section>
+            <section id="contact" class="contact">
+                <div class="contact-text">
+                    <span class="subtitle" data-i18n="contact.subtitle">LET'S CREATE SOMETHING</span>
+                    <h2 data-i18n-html="contact.title">Sweet Together &hearts;</h2>
+                    <p data-i18n="contact.copy">Have a cake in mind? Fill out the form and we'll get back to you soon!</p>
+                </div>
+                <div class="contact-form-container">
+                    <form id="inquiryForm">
+                        <div class="form-grid">
+                            <input type="text" placeholder="Your Name" data-i18n-placeholder="form.name" required>
+                            <input type="email" placeholder="Email Address" data-i18n-placeholder="form.email" required>
+                            <input type="tel" placeholder="Phone Number" data-i18n-placeholder="form.phone" required>
+                            <input type="date" placeholder="Event Date" data-i18n-placeholder="form.date" required>
+                            <input type="number" placeholder="Number of Servings" data-i18n-placeholder="form.servings">
+                            <input type="text" placeholder="Budget (Optional)" data-i18n-placeholder="form.budget">
+                            <textarea placeholder="Tell us about your cake..." data-i18n-placeholder="form.message" rows="4" required></textarea>
+
+                            <div class="upload-box">
+                                <span>📷</span>
+                                <p data-i18n-html="form.upload">Upload Inspiration Photo<br>(Optional)</p>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn" data-i18n="cta.sendInquiry">SEND INQUIRY</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">HOME</a>
+            <a href="cakes.html" class="active" data-i18n="nav.cakes">CAKES</a>
+            <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
+            <a href="#contact" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
+            <p data-i18n="footer.location">Mint Hill, NC</p>
+        </div>
+    </footer>
+
+    <script id="site-translations" type="application/json">
+    {
+        "en": {
+            "document.title": "Cakes | The Tran's Kitchen",
+            "nav.home": "HOME",
+            "nav.cakes": "CAKES",
+            "nav.about": "ABOUT",
+            "nav.contact": "CONTACT",
+            "cta.orderInquiry": "ORDER INQUIRY",
+            "cakes.subtitle": "OUR CAKES",
+            "cakes.freshLabel": "FRESH & FLAVORFUL",
+            "cakes.title": "Wedding & Birthday Cakes",
+            "cakes.copy": "Browse the two main cake collections below and jump directly to the section you want.",
+            "cakes.jumpWedding": "Jump to Wedding Cakes →",
+            "cakes.jumpBirthday": "Jump to Birthday Cakes →",
+            "cakes.weddingIntro": "Elegant tiers, soft florals, and timeless finishes.",
+            "cakes.birthdayIntro": "Playful colors, sweet details, and celebratory designs.",
+            "gallery.wedding": "WEDDING CAKES",
+            "gallery.birthday": "BIRTHDAY CAKES",
+            "contact.subtitle": "LET'S CREATE SOMETHING",
+            "contact.title": "Sweet Together &hearts;",
+            "contact.copy": "Have a cake in mind? Fill out the form and we'll get back to you soon!",
+            "form.name": "Your Name",
+            "form.email": "Email Address",
+            "form.phone": "Phone Number",
+            "form.date": "Event Date",
+            "form.servings": "Number of Servings",
+            "form.budget": "Budget (Optional)",
+            "form.message": "Tell us about your cake...",
+            "form.upload": "Upload Inspiration Photo<br>(Optional)",
+            "cta.sendInquiry": "SEND INQUIRY",
+            "cakes.wedding.oneTitle": "Romantic Floral Cake",
+            "cakes.wedding.oneCopy": "Soft ivory tiers with fresh blooms.",
+            "cakes.wedding.twoTitle": "Minimal White Cake",
+            "cakes.wedding.twoCopy": "Clean lines with a warm, modern finish.",
+            "cakes.wedding.threeTitle": "Two-Tier Classic",
+            "cakes.wedding.threeCopy": "Simple, graceful, and wedding-day ready.",
+            "cakes.wedding.fourTitle": "Berry Garden Cake",
+            "cakes.wedding.fourCopy": "Fresh berries with a soft cream finish.",
+            "cakes.wedding.fiveTitle": "Nude Floral Cake",
+            "cakes.wedding.fiveCopy": "Warm tones and airy floral details.",
+            "cakes.wedding.sixTitle": "Clean Cut Elegance",
+            "cakes.wedding.sixCopy": "Bright ivory layers with refined styling.",
+            "cakes.birthday.oneTitle": "Birthday Classic",
+            "cakes.birthday.oneCopy": "Light pink tones with festive finishing touches.",
+            "cakes.birthday.twoTitle": "Happy Birthday Cake",
+            "cakes.birthday.twoCopy": "Soft cream buttercream with a hand-lettered topper.",
+            "cakes.birthday.threeTitle": "Confetti Fun",
+            "cakes.birthday.threeCopy": "Bright and cheerful for a joyful celebration.",
+            "cakes.birthday.fourTitle": "Chocolate Celebration",
+            "cakes.birthday.fourCopy": "Rich layers with a smooth chocolate finish.",
+            "cakes.birthday.fiveTitle": "Party Pink Cake",
+            "cakes.birthday.fiveCopy": "Soft pastel layers with a playful vibe.",
+            "cakes.birthday.sixTitle": "Sweet Treat Cups",
+            "cakes.birthday.sixCopy": "A fun dessert option for party tables.",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. All Rights Reserved.",
+            "footer.location": "Mint Hill, NC"
+        },
+        "vi": {
+            "document.title": "Bánh Kem | The Tran's Kitchen",
+            "nav.home": "TRANG CHỦ",
+            "nav.cakes": "BÁNH KEM",
+            "nav.about": "GIỚI THIỆU",
+            "nav.contact": "LIÊN HỆ",
+            "cta.orderInquiry": "ĐẶT BÁNH",
+            "cakes.subtitle": "CÁC MẪU BÁNH CỦA CHÚNG TÔI",
+            "cakes.freshLabel": "TƯƠI MỚI & ĐẬM VỊ",
+            "cakes.title": "Bánh cưới & bánh sinh nhật",
+            "cakes.copy": "Khám phá hai bộ sưu tập bánh chính bên dưới và nhảy trực tiếp đến phần bạn muốn.",
+            "cakes.jumpWedding": "Đến phần bánh cưới →",
+            "cakes.jumpBirthday": "Đến phần bánh sinh nhật →",
+            "cakes.weddingIntro": "Các tầng bánh thanh lịch, hoa mềm mại và kiểu hoàn thiện vượt thời gian.",
+            "cakes.birthdayIntro": "Màu sắc vui tươi, chi tiết ngọt ngào và thiết kế đầy không khí lễ hội.",
+            "gallery.wedding": "BÁNH CƯỚI",
+            "gallery.birthday": "BÁNH SINH NHẬT",
+            "contact.subtitle": "CHÚNG TA HÃY TẠO RA ĐIỀU GÌ ĐÓ",
+            "contact.title": "Ngọt ngào cùng nhau &hearts;",
+            "contact.copy": "Bạn đã có ý tưởng về chiếc bánh? Điền vào mẫu và chúng tôi sẽ phản hồi sớm!",
+            "form.name": "Tên của bạn",
+            "form.email": "Địa chỉ email",
+            "form.phone": "Số điện thoại",
+            "form.date": "Ngày sự kiện",
+            "form.servings": "Số phần",
+            "form.budget": "Ngân sách (Không bắt buộc)",
+            "form.message": "Hãy kể cho chúng tôi về chiếc bánh của bạn...",
+            "form.upload": "Tải lên ảnh tham khảo<br>(Không bắt buộc)",
+            "cta.sendInquiry": "GỬI YÊU CẦU",
+            "cakes.wedding.oneTitle": "Bánh hoa lãng mạn",
+            "cakes.wedding.oneCopy": "Những tầng màu trắng ngà với hoa tươi.",
+            "cakes.wedding.twoTitle": "Bánh trắng tối giản",
+            "cakes.wedding.twoCopy": "Đường nét tinh gọn với vẻ hiện đại ấm áp.",
+            "cakes.wedding.threeTitle": "Bánh hai tầng cổ điển",
+            "cakes.wedding.threeCopy": "Đơn giản, thanh lịch và sẵn sàng cho ngày cưới.",
+            "cakes.wedding.fourTitle": "Bánh vườn dâu",
+            "cakes.wedding.fourCopy": "Dâu tươi với lớp kem mềm mịn.",
+            "cakes.wedding.fiveTitle": "Bánh hoa gam nude",
+            "cakes.wedding.fiveCopy": "Tông màu ấm và chi tiết hoa nhẹ nhàng.",
+            "cakes.wedding.sixTitle": "Thanh lịch tinh gọn",
+            "cakes.wedding.sixCopy": "Những tầng bánh ngà sáng với phong cách tinh tế.",
+            "cakes.birthday.oneTitle": "Bánh sinh nhật cổ điển",
+            "cakes.birthday.oneCopy": "Tông hồng nhạt với điểm nhấn vui tươi.",
+            "cakes.birthday.twoTitle": "Bánh chúc mừng sinh nhật",
+            "cakes.birthday.twoCopy": "Kem bơ màu kem dịu với chữ viết tay trên bánh.",
+            "cakes.birthday.threeTitle": "Bánh confetti vui nhộn",
+            "cakes.birthday.threeCopy": "Sáng sủa và vui tươi cho một buổi lễ trọn niềm vui.",
+            "cakes.birthday.fourTitle": "Bánh sô cô la kỷ niệm",
+            "cakes.birthday.fourCopy": "Những lớp bánh đậm vị với lớp sô cô la mịn.",
+            "cakes.birthday.fiveTitle": "Bánh hồng tiệc vui",
+            "cakes.birthday.fiveCopy": "Các lớp bánh pastel mềm với cảm giác vui tươi.",
+            "cakes.birthday.sixTitle": "Ly tráng miệng ngọt ngào",
+            "cakes.birthday.sixCopy": "Một lựa chọn tráng miệng vui mắt cho bàn tiệc.",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. Bảo lưu mọi quyền.",
+            "footer.location": "Mint Hill, NC"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

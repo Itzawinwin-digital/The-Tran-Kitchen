@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tran's Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-i18n="nav.home">HOME</a></li>
+                <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
+                <li><a href="#" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="#" data-i18n="nav.pricing">PRICING</a></li>
+                <li><a href="#" data-i18n="nav.faq">FAQ</a></li>
+                <li><a href="cakes.html#contact" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#explore" class="btn primary-btn" data-i18n="hero.viewCakes">VIEW CAKES</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-light">
+            <div class="hero-content">
+                <span class="subtitle" data-i18n="hero.subtitle">ARTISAN</span>
+                <h1 data-i18n-html="hero.title">Custom Cakes<br>Made with <em>Love</em></h1>
+                <p data-i18n-html="hero.copy">Handcrafted cakes & desserts<br>in Mint Hill, NC</p>
+                <div class="hero-buttons">
+                    <a href="#explore" class="btn primary-btn" data-i18n="hero.viewCakes">VIEW CAKES</a>
+                    <a href="#about" class="btn secondary-btn" data-i18n="about.learnMore">LEARN MORE ABOUT ME</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?q=80&w=800&auto=format&fit=crop" alt="Beautiful custom cake with flowers">
+            </div>
+        </section>
+
+        <section id="explore" class="explore">
+            <div class="section-title">
+                <h3 data-i18n="explore.title">EXPLORE OUR CAKES</h3>
+                <div class="divider"></div>
+            </div>
+            <div class="cake-grid">
+                <div class="cake-card">
+                    <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=400&auto=format&fit=crop" alt="Wedding Cake">
+                    <h4 data-i18n="gallery.wedding">WEDDING CAKES</h4>
+                    <a href="cakes.html#wedding-cakes" data-i18n="gallery.view">View Gallery &rarr;</a>
+                </div>
+                <div class="cake-card">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop" alt="Birthday Cake">
+                    <h4 data-i18n="gallery.birthday">BIRTHDAY CAKES</h4>
+                    <a href="cakes.html#birthday-cakes" data-i18n="gallery.view">View Gallery &rarr;</a>
+                </div>
+                <div class="cake-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=400&auto=format&fit=crop" alt="Jelly Flan Cake">
+                    <h4 data-i18n="gallery.jellyFlan">JELLY FLAN CAKES</h4>
+                    <a href="jelly-flan-cakes.html" data-i18n="gallery.view">View Gallery &rarr;</a>
+                </div>
+                <div class="cake-card">
+                    <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=400&auto=format&fit=crop" alt="Jelly Flower Cake">
+                    <h4 data-i18n="gallery.jellyFlower">JELLY FLOWER CAKES</h4>
+                    <a href="jelly-flower-cakes.html" data-i18n="gallery.view">View Gallery &rarr;</a>
+                </div>
+                <div class="cake-card">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=400&auto=format&fit=crop" alt="Seasonal Desserts">
+                    <h4 data-i18n="gallery.seasonal">SEASONAL DESSERTS</h4>
+                    <a href="seasonal-desserts.html" data-i18n="gallery.view">View Gallery &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about bg-light">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=800&auto=format&fit=crop" alt="Baker decorating a cake">
+            </div>
+            <div class="about-content">
+                <span class="hello-text" data-i18n="about.hello">Hello!</span>
+                <h2 data-i18n-html="about.title">I'm Tram, the baker<br>behind The Tran's Kitchen.</h2>
+                <p data-i18n="about.copy1">What started as a passion for creating beautiful desserts for family and friends has grown into a home-based bakery specializing in custom cakes, jelly cakes, and handcrafted desserts.</p>
+                <p data-i18n="about.copy2">Every cake is made with high quality ingredients, attention to detail, and a lot of love.</p>
+                <a href="#" class="btn primary-btn" data-i18n="about.learnMore">LEARN MORE ABOUT ME</a>
+            </div>
+        </section>
+
+        <!-- Inquiry form has been moved to the cakes page -->
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>The Tran's <span>Kitchen</span></h2>
+        </div>
+        <div class="footer-links">
+            <a href="#" data-i18n="nav.home">HOME</a>
+            <a href="#" data-i18n="nav.cakes">CAKES</a>
+            <a href="#" data-i18n="nav.about">ABOUT</a>
+            <a href="#" data-i18n="nav.pricing">PRICING</a>
+            <a href="#" data-i18n="nav.faq">FAQ</a>
+            <a href="cakes.html#contact" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
+            <p data-i18n="footer.location">Mint Hill, NC</p>
+        </div>
+    </footer>
+
+    <script id="site-translations" type="application/json">
+    {
+        "en": {
+            "document.title": "The Tran's Kitchen",
+            "nav.home": "HOME",
+            "nav.cakes": "CAKES",
+            "nav.about": "ABOUT",
+            "nav.pricing": "PRICING",
+            "nav.faq": "FAQ",
+            "nav.contact": "CONTACT",
+            "hero.subtitle": "ARTISAN",
+            "hero.title": "Custom Cakes<br>Made with <em>Love</em>",
+            "hero.copy": "Handcrafted cakes & desserts<br>in Mint Hill, NC",
+            "hero.viewCakes": "VIEW CAKES",
+            "explore.title": "EXPLORE OUR CAKES",
+            "gallery.wedding": "WEDDING CAKES",
+            "gallery.birthday": "BIRTHDAY CAKES",
+            "gallery.jellyFlan": "JELLY FLAN CAKES",
+            "gallery.jellyFlower": "WEEKLY SNACKS",
+            "gallery.seasonal": "SEASONAL DESSERTS",
+            "gallery.view": "View Gallery →",
+            "about.hello": "Hello!",
+            "about.title": "I'm Tram, the baker<br>behind The Tran's Kitchen.",
+            "about.copy1": "What started as a passion for creating beautiful desserts for family and friends has grown into a home-based bakery specializing in custom cakes, jelly cakes, and handcrafted desserts.",
+            "about.copy2": "Every cake is made with high quality ingredients, attention to detail, and a lot of love.",
+            "about.learnMore": "LEARN MORE ABOUT ME",
+            "contact.subtitle": "LET'S CREATE SOMETHING",
+            "contact.title": "Sweet Together &hearts;",
+            "contact.copy": "Have a cake in mind? Fill out the form and we'll get back to you soon!",
+            "form.name": "Your Name",
+            "form.email": "Email Address",
+            "form.phone": "Phone Number",
+            "form.date": "Event Date",
+            "form.servings": "Number of Servings",
+            "form.budget": "Budget (Optional)",
+            "form.message": "Tell us about your cake...",
+            "form.upload": "Upload Inspiration Photo<br>(Optional)",
+            "cta.sendInquiry": "SEND INQUIRY",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. All Rights Reserved.",
+            "footer.location": "Mint Hill, NC"
+        },
+        "vi": {
+            "document.title": "Tiệm bánh The Tran's Kitchen",
+            "nav.home": "TRANG CHỦ",
+            "nav.cakes": "BÁNH KEM",
+            "nav.about": "GIỚI THIỆU",
+            "nav.pricing": "BẢNG GIÁ",
+            "nav.faq": "CÂU HỎI",
+            "nav.contact": "LIÊN HỆ",
+            "hero.subtitle": "THỦ CÔNG",
+            "hero.title": "Bánh kem tùy chỉnh<br>Được làm bằng <em>tình yêu</em>",
+            "hero.copy": "Bánh kem và món ngọt thủ công<br>tại Mint Hill, NC",
+            "hero.viewCakes": "XEM BÁNH",
+            "explore.title": "KHÁM PHÁ CÁC MẪU BÁNH CỦA CHÚNG TÔI",
+            "gallery.wedding": "BÁNH CƯỚI",
+            "gallery.birthday": "BÁNH SINH NHẬT",
+            "gallery.jellyFlan": "BÁNH FLAN RAU CÂU",
+            "gallery.jellyFlower": "BÁNH ĂN VẶT HẰNG TUẦN",
+            "gallery.seasonal": "MÓN TRÁNG MIỆNG THEO MÙA",
+            "gallery.view": "Xem bộ sưu tập →",
+            "about.hello": "Xin chào!",
+            "about.title": "Tôi là Tram, thợ bánh<br>đứng sau The Tran's Kitchen.",
+            "about.copy1": "Điều bắt đầu từ niềm đam mê tạo ra những món tráng miệng đẹp mắt cho gia đình và bạn bè đã phát triển thành một tiệm bánh tại nhà chuyên về bánh kem tùy chỉnh, bánh rau câu và các món tráng miệng thủ công.",
+            "about.copy2": "Mỗi chiếc bánh đều được làm từ nguyên liệu chất lượng cao, chú ý đến từng chi tiết và rất nhiều tình yêu.",
+            "about.learnMore": "TÌM HIỂU THÊM VỀ TÔI",
+            "contact.subtitle": "CHÚNG TA HÃY TẠO RA ĐIỀU GÌ ĐÓ",
+            "contact.title": "Ngọt ngào cùng nhau &hearts;",
+            "contact.copy": "Bạn đã có ý tưởng về chiếc bánh? Điền vào mẫu và chúng tôi sẽ phản hồi sớm!",
+            "form.name": "Tên của bạn",
+            "form.email": "Địa chỉ email",
+            "form.phone": "Số điện thoại",
+            "form.date": "Ngày sự kiện",
+            "form.servings": "Số phần",
+            "form.budget": "Ngân sách (Không bắt buộc)",
+            "form.message": "Hãy kể cho chúng tôi về chiếc bánh của bạn...",
+            "form.upload": "Tải lên ảnh tham khảo<br>(Không bắt buộc)",
+            "cta.sendInquiry": "GỬI YÊU CẦU",
+            "footer.copyright": "&copy; 2024 The Tran's Kitchen. Bảo lưu mọi quyền.",
+            "footer.location": "Mint Hill, NC"
+        }
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
