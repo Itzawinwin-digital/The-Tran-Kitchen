@@ -8,24 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Allura&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="topbar">
-        <div class="language-switcher" role="group" aria-label="Language switcher">
-            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
-            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
-        </div>
-        <div class="social-links" aria-label="Social links">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">◎</a>
-        </div>
-    </div>
 
     <header>
         <div class="logo">
-            <h2><a href="index.html">The Tran's <span>Kitchen</span></a></h2>
+            <a href="index.html" aria-label="The Tran's Kitchen home">
+                <img src="media/logo_portrait/Picture1.png" alt="The Tran's Kitchen logo">
+                <h2>The Tran's <span>Kitchen</span></h2>
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
                 <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
                 <li><a href="dessert-shop.html" class="active" data-i18n="nav.dessertShop">DESSERTS</a></li>
                 <li><a href="index.html#about" data-i18n="nav.about">ABOUT</a></li>
@@ -34,6 +26,12 @@
             </ul>
         </nav>
         <div class="header-actions">
+            <div class="header-utilities">
+                <div class="language-switcher" role="group" aria-label="Language switcher">
+                    <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+                    <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+                </div>
+            </div>
             <a href="#flan" class="btn primary-btn" data-i18n="shop.viewSections">VIEW COLLECTIONS</a>
         </div>
     </header>
@@ -223,7 +221,6 @@
             <h2>The Tran's <span>Kitchen</span></h2>
         </div>
         <div class="footer-links">
-            <a href="index.html" data-i18n="nav.home">HOME</a>
             <a href="cakes.html" data-i18n="nav.cakes">CAKES</a>
             <a href="dessert-shop.html" class="active" data-i18n="nav.dessertShop">DESSERTS</a>
             <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
@@ -234,13 +231,16 @@
             <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
             <p data-i18n="footer.location">Mint Hill, NC</p>
         </div>
+        <div class="footer-social-links social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
     </footer>
 
     <script id="site-translations" type="application/json">
     {
         "en": {
             "document.title": "Dessert Cart | The Tran's Kitchen",
-            "nav.home": "HOME",
             "nav.cakes": "CAKES",
             "nav.dessertShop": "DESSERTS",
             "nav.about": "ABOUT",
@@ -301,7 +301,6 @@
         },
         "vi": {
             "document.title": "Giỏ Đặt Bánh | The Tran's Kitchen",
-            "nav.home": "TRANG CHỦ",
             "nav.cakes": "BÁNH KEM",
             "nav.dessertShop": "MÓN TRÁNG MIỆNG",
             "nav.about": "GIỚI THIỆU",

@@ -9,33 +9,29 @@
 </head>
 <body>
 
-    <div class="topbar">
-        <div class="language-switcher" role="group" aria-label="Language switcher">
-            <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
-            <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
-        </div>
-        <div class="social-links" aria-label="Social links">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">◎</a>
-        </div>
-    </div>
-
     <header>
         <div class="logo">
-            <h2>The Tran's <span>Kitchen</span></h2>
+            <a href="index.html" aria-label="The Tran's Kitchen home">
+                <img src="media/logo_portrait/Picture1.png" alt="The Tran's Kitchen logo">
+                <h2>The Tran's <span>Kitchen</span></h2>
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active" data-i18n="nav.home">HOME</a></li>
                 <li><a href="cakes.html" data-i18n="nav.cakes">CAKES</a></li>
                 <li><a href="dessert-shop.html" data-i18n="nav.dessertShop">DESSERTS</a></li>
                 <li><a href="#hi-im-tram" data-i18n="nav.about">ABOUT</a></li>
-                <li><a href="#" data-i18n="nav.pricing">PRICING</a></li>
                 <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
                 <li><a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a></li>
             </ul>
         </nav>
         <div class="header-actions">
+            <div class="header-utilities">
+                <div class="language-switcher" role="group" aria-label="Language switcher">
+                    <button type="button" class="lang-btn active" data-language-switch="en">EN</button>
+                    <button type="button" class="lang-btn" data-language-switch="vi">VI</button>
+                </div>
+            </div>
             <a href="#explore" class="btn primary-btn" data-i18n="hero.viewCakes">VIEW CAKES</a>
         </div>
     </header>
@@ -68,7 +64,7 @@
                     <a href="cakes.html#wedding-cakes" data-i18n="gallery.view">View Gallery &rarr;</a>
                 </div>
                 <div class="cake-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop" alt="Birthday Cake">
+                    <img src="media\bd_cake\Tram - 570C134A-3CF7-4428-80A6-B445A66DF70B.png" alt="Birthday Cake">
                     <h4 data-i18n="gallery.birthday">BIRTHDAY CAKES</h4>
                     <a href="cakes.html#birthday-cakes" data-i18n="gallery.view">View Gallery &rarr;</a>
                 </div>
@@ -92,7 +88,7 @@
 
         <section id="about" class="about bg-light">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=800&auto=format&fit=crop" alt="Baker decorating a cake">
+                <img src="media/logo_portrait/Tram%20-%20IMG_0493.jpeg" alt="Tram, the baker">
             </div>
             <div class="about-content">
                 <span class="hello-text" data-i18n="about.hello">Hello!</span>
@@ -111,11 +107,9 @@
             <h2>The Tran's <span>Kitchen</span></h2>
         </div>
         <div class="footer-links">
-            <a href="#" data-i18n="nav.home">HOME</a>
             <a href="#" data-i18n="nav.cakes">CAKES</a>
             <a href="dessert-shop.html" data-i18n="nav.dessertShop">DESSERTS</a>
             <a href="#hi-im-tram" data-i18n="nav.about">ABOUT</a>
-            <a href="#" data-i18n="nav.pricing">PRICING</a>
             <a href="faq.html" data-i18n="nav.faq">FAQ</a>
             <a href="contact.html#contact" data-i18n="nav.contact">CONTACT</a>
         </div>
@@ -123,17 +117,19 @@
             <p data-i18n-html="footer.copyright">&copy; 2024 The Tran's Kitchen. All Rights Reserved.</p>
             <p data-i18n="footer.location">Mint Hill, NC</p>
         </div>
+        <div class="footer-social-links social-links" aria-label="Social links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+        </div>
     </footer>
 
     <script id="site-translations" type="application/json">
     {
         "en": {
             "document.title": "The Tran's Kitchen",
-            "nav.home": "HOME",
             "nav.cakes": "CAKES",
             "nav.dessertShop": "DESSERTS",
             "nav.about": "ABOUT",
-            "nav.pricing": "PRICING",
             "nav.faq": "FAQ",
             "nav.contact": "CONTACT",
             "hero.subtitle": "ARTISAN",
@@ -169,11 +165,9 @@
         },
         "vi": {
             "document.title": "Tiệm bánh The Tran's Kitchen",
-            "nav.home": "TRANG CHỦ",
             "nav.cakes": "BÁNH KEM",
-            "nav.dessertShop": "MÓN TRÁNG MIỆNG",
+            "nav.dessertShop": "TRÁNG MIỆNG",
             "nav.about": "GIỚI THIỆU",
-            "nav.pricing": "BẢNG GIÁ",
             "nav.faq": "CÂU HỎI",
             "nav.contact": "LIÊN HỆ",
             "hero.subtitle": "THỦ CÔNG",
