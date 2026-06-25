@@ -217,6 +217,43 @@
         </section>
     </main>
 
+    <div class="cart-shell" data-cart-root data-zelle-phone="your Zelle phone number">
+        <button type="button" class="cart-toggle-fab" data-cart-toggle aria-expanded="false"><span data-i18n="cart.toggle">Cart</span> <span class="cart-toggle-count" data-cart-count>0</span></button>
+        <div class="cart-overlay" data-cart-overlay></div>
+        <aside class="cart-drawer" data-cart-drawer>
+            <div class="cart-drawer-header">
+                <h3 data-i18n="cart.title">Your Cart</h3>
+                <button type="button" class="cart-close-btn" data-cart-close aria-label="Close cart">×</button>
+            </div>
+            <div class="cart-drawer-body">
+                <div class="cart-summary-panel">
+                    <h3 data-i18n="cart.summaryTitle">Cart Summary</h3>
+                    <div class="cart-items" data-cart-items></div>
+                    <div class="cart-total-row">
+                        <span data-i18n="cart.totalLabel">Total</span>
+                        <strong data-cart-total>$0.00</strong>
+                    </div>
+                    <p class="cart-zelle-note" data-i18n-html="cart.zelleNote">After submit, please Zelle the total to <strong data-zelle-display>your Zelle phone number</strong>.</p>
+                    <button type="button" class="cart-clear-btn" data-cart-clear data-i18n="cart.clear">Clear Cart</button>
+                </div>
+                <div class="cart-form-panel">
+                    <h3 data-i18n="cart.checkoutTitle">Checkout Details</h3>
+                    <p class="cart-checkout-intro" data-i18n="cart.checkoutCopy">Name, phone number, and email are required before you can submit the order request.</p>
+                    <form class="cart-checkout-form" data-cart-checkout>
+                        <div class="form-grid">
+                            <input type="text" name="customerName" placeholder="Your Name" data-i18n-placeholder="cart.name" required>
+                            <input type="tel" name="customerPhone" placeholder="Phone Number" data-i18n-placeholder="cart.phone" required>
+                            <input type="email" name="customerEmail" placeholder="Email Address" data-i18n-placeholder="cart.email" required>
+                            <input type="date" name="eventDate" placeholder="Event Date" data-i18n-placeholder="cart.date">
+                            <textarea name="orderNotes" placeholder="Order notes, delivery preferences, or flavors..." data-i18n-placeholder="cart.notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn cart-submit-btn" data-i18n="cart.submit">Submit Order Request</button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+
     <footer>
         <div class="footer-logo">
             <h2>The Tran's <span>Kitchen</span></h2>

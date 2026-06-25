@@ -597,6 +597,46 @@ textarea {
     color: var(--muted);
 }
 
+.upload-input {
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--text);
+    border: 1px solid rgba(199, 174, 115, 0.32);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.upload-input::file-selector-button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+    margin-right: 0.75rem;
+    font: inherit;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.upload-input:hover::file-selector-button {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.upload-input:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(140, 154, 120, 0.12);
+}
+
 .upload-box span {
     font-size: 1.5rem;
     opacity: 0.75;

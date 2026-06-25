@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carouselRoots = document.querySelectorAll('[data-carousel]');
     const inquiryForm = document.getElementById('inquiryForm');
     const cartRoots = document.querySelectorAll('[data-cart-root]');
+    const cartOpenButtons = document.querySelectorAll('[data-cart-open]');
     const cartStorageKey = 'tran-kitchen-cart';
     const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
     const translations = translationScript ? JSON.parse(translationScript.textContent) : null;
@@ -222,6 +223,22 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutForm.reset();
             clearCart();
             setDrawerOpen(false);
+        });
+    });
+
+    cartOpenButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const cartRoot = document.querySelector('[data-cart-root]');
+            const cartDrawer = cartRoot?.querySelector('[data-cart-drawer]');
+
+            if (!cartRoot || !cartDrawer) {
+                return;
+            }
+
+            cartDrawer.classList.add('is-open');
+            cartRoot.classList.add('is-open');
+            cartRoot.querySelector('[data-cart-overlay]')?.classList.add('is-open');
+            cartRoot.querySelector('[data-cart-toggle]')?.setAttribute('aria-expanded', 'true');
         });
     });
 
