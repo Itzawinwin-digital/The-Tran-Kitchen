@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isOpen);
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
+
     const languageButtons = document.querySelectorAll('[data-language-switch]');
     const translatedNodes = document.querySelectorAll('[data-i18n], [data-i18n-html]');
     const translatedPlaceholders = document.querySelectorAll('[data-i18n-placeholder]');
