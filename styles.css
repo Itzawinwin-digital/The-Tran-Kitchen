@@ -426,10 +426,11 @@ section {
 }
 
 .section-title h3 {
+    font-family: var(--font-display);
     font-size: 0.84rem;
     letter-spacing: 0.34em;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     color: #4b463e;
 }
 
