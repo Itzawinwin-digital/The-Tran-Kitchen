@@ -150,13 +150,56 @@ header {
 
 .logo h2,
 .footer-logo h2 {
-    font-family: var(--font-display);
-    font-size: 2.4rem;
+    font-family: var(--font-body);
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.2;
     color: #5a574a;
     text-align: center;
     letter-spacing: 0.08em;
+}
+
+.header-phone {
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    color: var(--gold);
+    transition: all 0.2s ease;
+    padding: 0.45rem 0.8rem;
+    border: 1.5px solid var(--gold);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(199, 174, 115, 0.08), rgba(199, 174, 115, 0.02));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.header-phone::before {
+    content: "📞";
+    font-size: 0.85rem;
+}
+
+.header-phone:hover {
+    color: #fff;
+    background: linear-gradient(135deg, var(--gold), rgba(199, 174, 115, 0.9));
+    border-color: var(--gold);
+    box-shadow: 0 4px 12px rgba(199, 174, 115, 0.3);
+    transform: translateY(-2px);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.logo-phone {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin: 0;
 }
 
 .logo span,
@@ -426,7 +469,7 @@ section {
 }
 
 .section-title h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 0.84rem;
     letter-spacing: 0.34em;
     text-transform: uppercase;
