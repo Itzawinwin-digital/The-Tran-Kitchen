@@ -153,8 +153,9 @@ header {
     font-family: var(--font-body);
     font-size: 3rem;
     font-weight: 400;
-    line-height: 0.8;
+    line-height: 1.2;
     color: #5a574a;
+    text-align: center;
 }
 
 .logo span,
@@ -165,7 +166,7 @@ header {
     letter-spacing: 0;
     text-transform: none;
     color: var(--gold);
-    margin-top: -0.08rem;
+    margin-top: 0.1rem;
 }
 
 nav ul {
