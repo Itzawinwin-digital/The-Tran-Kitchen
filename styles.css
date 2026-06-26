@@ -14,6 +14,8 @@
     --font-display: 'Cormorant Garamond', serif;
     --font-script: 'Allura', cursive;
     --font-body: 'Lato', sans-serif;
+    --site-max-width: 1240px;
+    --site-gutter: 24px;
 }
 
 * {
@@ -44,7 +46,7 @@ body {
 }
 
 body > * {
-    width: min(1200px, calc(100% - 48px));
+    width: min(var(--site-max-width), calc(100% - (var(--site-gutter) * 2)));
     margin-inline: auto;
 }
 
@@ -126,8 +128,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
-    width: min(1260px, calc(100% - 36px));
+    gap: 1.35rem;
     background: rgba(255, 253, 247, 0.97);
     padding: 0.75rem 1rem;
     border: 1px solid rgba(220, 209, 188, 0.72);
@@ -245,7 +246,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: clamp(1rem, 1.7vw, 1.6rem);
     list-style: none;
 }
 
@@ -256,8 +257,8 @@ nav ul {
 nav a {
     position: relative;
     padding-bottom: 0.5rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
 }
@@ -617,6 +618,8 @@ section {
     grid-template-columns: 0.92fr 1.58fr;
     gap: 1.5rem;
     padding: 2.6rem 2rem;
+    border-radius: 28px;
+    overflow: hidden;
 }
 
 .contact-text {
@@ -1483,7 +1486,7 @@ footer {
 
 @media (max-width: 1100px) {
     body > * {
-        width: min(100% - 32px, 1200px);
+        width: min(var(--site-max-width), calc(100% - 32px));
     }
 
     .cake-grid {
@@ -1788,7 +1791,7 @@ footer {
 
 @media (max-width: 520px) {
     body > * {
-        width: min(100% - 20px, 1200px);
+        width: min(var(--site-max-width), calc(100% - 20px));
     }
 
     .cake-grid {
