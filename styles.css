@@ -164,6 +164,7 @@ header {
     letter-spacing: 0.03em;
     font-weight: 600;
     color: var(--gold);
+    text-decoration: none;
     transition: all 0.2s ease;
     padding: 0.45rem 0.8rem;
     border: 1.5px solid var(--gold);
@@ -177,6 +178,31 @@ header {
 .header-phone::before {
     content: "📞";
     font-size: 0.85rem;
+}
+
+.header-contact-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.18rem;
+}
+
+.header-social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.header-social-links a {
+    width: 0.95rem;
+    height: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.76rem;
 }
 
 .header-phone:hover {
@@ -240,17 +266,6 @@ nav a:hover {
     color: var(--text);
 }
 
-nav a.active::after,
-nav a:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--gold);
-}
-
 .header-actions {
     justify-self: end;
     display: flex;
@@ -285,6 +300,7 @@ nav a:hover::after {
     width: 0.92rem;
     height: 0.92rem;
     font-size: 0.76rem;
+    text-decoration: none;
 }
 
 .footer-social-links {
@@ -296,6 +312,7 @@ nav a:hover::after {
     width: 1.05rem;
     height: 1.05rem;
     font-size: 0.82rem;
+    text-decoration: none;
 }
 
 .menu-toggle {
@@ -1551,14 +1568,34 @@ footer {
     }
 
     .header-phone {
-        font-size: 0.65rem;
+        font-size: 0;
+        line-height: 0;
         padding: 0.3rem 0.5rem;
         border-radius: 15px;
         gap: 0.2rem;
     }
 
+    .header-phone .phone-text {
+        display: none;
+    }
+
     .header-phone::before {
         font-size: 0.7rem;
+    }
+
+    .header-phone {
+        width: 2.15rem;
+        justify-content: center;
+        padding-inline: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .header-contact-stack {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.45rem;
     }
 
     .nav-menu {
@@ -1568,8 +1605,7 @@ footer {
         right: 0;
         background: rgba(255, 253, 247, 0.98);
         border-radius: 0 0 20px 20px;
-        border: 1px solid rgba(220, 209, 188, 0.72);
-        border-top: none;
+        border: none;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
