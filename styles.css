@@ -127,6 +127,7 @@ header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 2rem;
+    width: min(1260px, calc(100% - 36px));
     background: rgba(255, 253, 247, 0.97);
     padding: 0.75rem 1rem;
     border: 1px solid rgba(220, 209, 188, 0.72);
@@ -779,6 +780,15 @@ footer {
     font-size: 0.78rem;
 }
 
+.footer-watermark {
+    margin-top: 0.85rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.72;
+}
+
 .gallery-hero {
     padding: 2.6rem 2rem 1.2rem;
     text-align: center;
@@ -820,6 +830,7 @@ footer {
     margin: 0.55rem auto 0;
     font-size: 0.95rem;
     color: var(--muted);
+    text-align: center;
 }
 
 .gallery-grid {
